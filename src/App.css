@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body::before {
+  content: "My TO-DO";
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: rgb(189, 245, 225);
+}
+
+body::after {
+  content: "Developed by Roshin";
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+
+body {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+}
+
+.todo-container {
+  width: 60rem;
+  height: 50rem;
+  padding: 4rem;
+  /* background-color: rgb(7, 7, 7); */
+  box-shadow: 0 0.5rem 1rem rgba(253, 245, 3, 0.3);
+  overflow-y: auto;
+  background-image: url(./BLACK_MOON_IS_COMING_ENG.jpg);
+  background-size: cover;
+}
+
+.form-container {
+  margin-bottom: 4rem;
+}
+
+.form-container form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-control input[type='text'] {
+  height: 4rem;
+  padding: 0.5rem;
+  width: 70%;
+  text-transform: capitalize;
+  margin-right: 8rem;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.3rem 0.5rem rgba(255, 248, 248, 0.3);
+}
+
+input[type='checkbox'] {
+  margin-right: 1rem;
+}
+
+button {
+  width: 10rem;
+  height: 3rem;
+}
+
+.list {
+  width: 100%;
+}
+
+.list li {
+  margin: 0.5rem 0;
+  font-size: 1.7rem;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(45, 174, 174);
+  box-shadow: 0 0.3rem 0.5rem rgba(163, 226, 4, 0.3);
+}
+
+.btn-dlt {
+  color: rgb(233, 8, 8);
+  margin-right: 0.5rem;
+}
+
+.btn-edit {
+  color: rgb(239, 239, 246);
+  margin-left: 0.5rem;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.alert {
+  width: 15rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.success {
+  background-color: rgb(33, 223, 33);
+}
+
+.danger {
+  background-color: rgb(230, 23, 23);
+}
+
+.btn-clear {
+  position: absolute;
+  top: 5rem;
+  right: 18rem;
+  font-size: 2rem;
+  color: rgb(245, 0, 0);
+  box-shadow: 0 0.3rem 0.5rem rgba(244, 31, 31, 0.839);
+}
+
+
+.btn-submit {
+  background-color: rgb(25, 170, 25);
+  border: none;
+  outline: none;
+  color: aliceblue;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.3rem 0.5rem rgb(49, 126, 14);
+}
+
+
+
+.todo-container {
+  position: relative;
+}
+
+.input-control {
+  position: relative;
+}
+
+.alert {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-0.5rem);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake-animation {
+  animation: shake 0.5s;
+}
+
+.btn-clear {
+  transition: transform 0.3s;
+}
+
+.btn-clear:hover {
+  transform: scale(1.1);
+}
